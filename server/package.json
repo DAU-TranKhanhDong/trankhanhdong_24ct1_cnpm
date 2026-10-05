@@ -1,0 +1,26 @@
+{
+  "name": "backend-server",
+  "version": "1.0.0",
+  "description": "Node.js + Express Backend Server for GiaDungSmart",
+  "main": "src/app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "keywords": [
+    "express",
+    "nodejs",
+    "mern"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
