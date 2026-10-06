@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import healthRoutes from './routes/healthRoutes.js';
+import { connectDB, getDBStatus } from './config/db.js';
 
 dotenv.config();
 
@@ -24,13 +25,32 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Routes API v1
 app.use('/api/v1', healthRoutes);
 
-// Khởi chạy server
-app.listen(PORT, () => {
+// Endpoint kiểm tra kết nối Database
+app.get('/api/v1/db-status', (req, res) => {
+  const status = getDBStatus();
+  res.status(status.connected ? 200 : 503).json({
+    status: status.connected ? 'connected' : 'disconnected',
+    database: status.config.database,
+    host: `${status.config.host}:${status.config.port}`,
+    message: status.connected
+      ? 'Đã kết nối thành công tới Database MySQL gia_dung_shop'
+      : 'Chưa kết nối được MySQL. Hãy khởi động dịch vụ MySQL (XAMPP) và kiểm tra file .env',
+    schema: status.schema,
+    timestamp: new Date().toISOString()
+  });
+});
+
+// Khởi chạy server và kết nối Database
+app.listen(PORT, async () => {
   console.log('===============================================');
   console.log('🚀 Server Node.js + Express đang chạy tại:');
-  console.log('👉 Trang chủ:   http://localhost:' + PORT);
-  console.log('👉 API Health:  http://localhost:' + PORT + '/api/v1/health');
+  console.log('👉 Trang chủ:      http://localhost:' + PORT);
+  console.log('👉 API Health:     http://localhost:' + PORT + '/api/v1/health');
+  console.log('👉 API DB Status:  http://localhost:' + PORT + '/api/v1/db-status');
   console.log('===============================================');
+  
+  // Thực hiện kết nối Database
+  await connectDB();
 });
 
 export default app;
