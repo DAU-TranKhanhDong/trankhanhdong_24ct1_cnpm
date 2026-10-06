@@ -100,7 +100,7 @@ DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
 DB_PASSWORD=
-DB_NAME=gia_dung_shop
+DB_NAME=giadungsmart
 ```
 
 ### 4. API Kiểm Tra Trạng Thái Kết Nối CSDL (Database Healthcheck)
