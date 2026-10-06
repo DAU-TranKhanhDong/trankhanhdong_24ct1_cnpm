@@ -186,12 +186,31 @@ sequenceDiagram
 │   ├── database.sql              # Kịch bản tạo Database gia_dung_shop & các bảng
 │   ├── .env.example              # Mẫu cấu hình biến môi trường Database
 │   └── package.json              # Cấu hình Express, mysql2, cors, dotenv
+├── he-thong-giadungsmart.drawio  # SƠ ĐỒ HỆ THỐNG MỞ TRỰC TIẾP TRÊN APP.DIAGRAMS.NET
+├── diagram-architecture.mermaid  # Sơ đồ Mermaid dự án (xem nhanh trên GitDiagram)
 ├── index.html                    # Tệp HTML mẫu Vite
 ├── package.json                  # Cấu hình thư viện và scripts frontend
 ├── vite.config.js                # Cấu hình Vite React & Tailwind
 ├── netlify.toml                  # Cấu hình build & redirect cho Netlify/Vercel
 └── README.md                     # Tài liệu kiến trúc dự án & Database
 ```
+
+---
+
+## 🎨 Hướng Dẫn Mở Sơ Đồ Hệ Thống Trên https://app.diagrams.net/
+
+Dự án đã có sẵn file sơ đồ kiến trúc hoàn chỉnh: [`he-thong-giadungsmart.drawio`](he-thong-giadungsmart.drawio). Bạn có thể mở ngay theo 2 cách cực kỳ đơn giản:
+
+### Cách 1: Mở trực tiếp từ máy (Nhanh nhất)
+1. Truy cập **[https://app.diagrams.net/](https://app.diagrams.net/)** (Draw.io).
+2. Chọn **Open Existing Diagram** (hoặc vào menu `File` ➔ `Open From` ➔ `Device`).
+3. Chọn tệp **`he-thong-giadungsmart.drawio`** trong thư mục dự án của bạn.
+4. Sơ đồ sẽ hiển thị trực quan đầy đủ màu sắc, phân vùng và các luồng tương tác!
+
+### Cách 2: Mở trực tiếp từ GitHub
+1. Vào **[https://app.diagrams.net/](https://app.diagrams.net/)**.
+2. Chọn `File` ➔ `Open From` ➔ `GitHub`.
+3. Đăng nhập tài khoản GitHub, chọn repository `DAU-TranKhanhDong/trankhanhdong_24ct1_cnpm`, chọn nhánh `main` và mở tệp `he-thong-giadungsmart.drawio`.
 
 ---
 
@@ -226,3 +245,4 @@ sequenceDiagram
    npm install
    npm run dev
    ```
+
