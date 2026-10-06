@@ -4,6 +4,7 @@ import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import healthRoutes from './routes/healthRoutes.js';
+import authRoutes from './routes/authRoutes.js';
 import { connectDB, getDBStatus } from './config/db.js';
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 
 // Routes API v1
 app.use('/api/v1', healthRoutes);
+app.use('/api/v1/auth', authRoutes);
 
 // Endpoint kiểm tra kết nối Database
 app.get('/api/v1/db-status', (req, res) => {

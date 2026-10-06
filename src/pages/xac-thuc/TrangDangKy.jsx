@@ -17,13 +17,13 @@ export default function RegisterPage() {
   });
   const [toast, setToast] = useState(null);
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     if (formData.password.length < 3) {
       setToast({ type: 'error', message: 'Mật khẩu phải từ 3 ký tự trở lên' });
       return;
     }
-    const res = register(formData);
+    const res = await register(formData);
     if (res.success) {
       setToast({ type: 'success', message: 'Đăng ký tài khoản Khách Hàng thành công!' });
       setTimeout(() => {

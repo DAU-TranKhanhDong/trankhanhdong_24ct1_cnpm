@@ -65,6 +65,43 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('app_users', JSON.stringify(users));
   }, [users]);
 
+  // Tự động đồng bộ người dùng từ CSDL MySQL XAMPP khi khởi động
+  useEffect(() => {
+    const fetchUsersFromDB = async () => {
+      try {
+        const res = await fetch('http://localhost:3000/api/v1/auth/users');
+        if (res.ok) {
+          const json = await res.json();
+          if (json.data && json.data.length > 0) {
+            setUsers(prev => {
+              const merged = [...prev];
+              json.data.forEach(dbUser => {
+                if (!merged.some(u => u.email.toLowerCase() === dbUser.email.toLowerCase())) {
+                  merged.push({
+                    id: `usr_${dbUser.id}`,
+                    db_id: dbUser.id,
+                    name: dbUser.name,
+                    email: dbUser.email,
+                    phone: dbUser.phone || '',
+                    address: dbUser.address || '',
+                    role: dbUser.role || 'customer',
+                    status: 'active',
+                    avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
+                    createdAt: dbUser.createdAt ? String(dbUser.createdAt).split('T')[0] : '2026-10-06'
+                  });
+                }
+              });
+              return merged;
+            });
+          }
+        }
+      } catch (e) {
+        // MySQL backend chưa bật hoặc offline
+      }
+    };
+    fetchUsersFromDB();
+  }, []);
+
   useEffect(() => {
     if (currentUser) {
       sessionStorage.setItem('app_session_user', JSON.stringify(currentUser));
@@ -108,14 +145,15 @@ export const AuthProvider = ({ children }) => {
     return { success: true, user: cust };
   };
 
-  // Đăng ký tài khoản mới: KHÁCH HÀNG CHỈ CÓ QUYỀN CUSTOMER
-  const register = (data) => {
+  // Đăng ký tài khoản mới: KHÁCH HÀNG CHỈ CÓ QUYỀN CUSTOMER (Tự động ghi vào CSDL MySQL XAMPP)
+  const register = async (data) => {
     const cleanEmail = data.email.toLowerCase().trim();
     const exists = users.some(u => u.email.toLowerCase() === cleanEmail);
     if (exists) {
       return { success: false, message: 'Email này đã được sử dụng' };
     }
-    const newUser = {
+
+    let newUser = {
       id: `usr_${Date.now()}`,
       name: data.name.trim(),
       email: cleanEmail,
@@ -127,6 +165,31 @@ export const AuthProvider = ({ children }) => {
       avatar: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80',
       createdAt: new Date().toISOString().split('T')[0]
     };
+
+    // Gửi yêu cầu lưu vào CSDL MySQL qua Backend API
+    try {
+      const res = await fetch('http://localhost:3000/api/v1/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: data.name.trim(),
+          email: cleanEmail,
+          password: data.password,
+          phone: data.phone?.trim() || '',
+          address: data.address?.trim() || ''
+        })
+      });
+      const result = await res.json();
+      if (!res.ok) {
+        return { success: false, message: result.message || 'Lỗi khi lưu vào CSDL MySQL' };
+      }
+      if (result.user) {
+        newUser = { ...newUser, ...result.user };
+      }
+    } catch (err) {
+      console.warn('⚠️ Backend chưa chạy hoặc lỗi mạng, lưu vào bộ nhớ tạm:', err.message);
+    }
+
     setUsers(prev => [newUser, ...prev]);
     setCurrentUser(newUser);
     return { success: true, user: newUser };
