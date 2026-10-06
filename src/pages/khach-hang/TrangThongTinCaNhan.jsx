@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { User, Phone, Mail, MapPin, Shield, Check, Lock } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import Toast from '../../components/dung-chung/ThongBaoToast';
@@ -6,6 +7,24 @@ import Toast from '../../components/dung-chung/ThongBaoToast';
 export default function ProfilePage() {
   const { currentUser, updateProfile } = useAuth();
   const [toast, setToast] = useState(null);
+
+  if (!currentUser) {
+    return (
+      <div className="max-w-md mx-auto py-20 text-center space-y-4">
+        <div className="w-16 h-16 rounded-full bg-orange-100 text-orange-600 flex items-center justify-center mx-auto">
+          <User size={32} />
+        </div>
+        <h2 className="text-xl font-bold text-slate-900">Bạn Chưa Đăng Nhập</h2>
+        <p className="text-xs text-slate-500">Vui lòng đăng nhập để xem và quản lý thông tin tài khoản cá nhân của bạn.</p>
+        <Link
+          to="/login"
+          className="inline-block px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-xl shadow-md transition-all"
+        >
+          Đăng Nhập Ngay
+        </Link>
+      </div>
+    );
+  }
 
   const [formData, setFormData] = useState({
     name: currentUser?.name || '',

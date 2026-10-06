@@ -47,19 +47,17 @@ export const AuthProvider = ({ children }) => {
   });
 
   const [currentUser, setCurrentUser] = useState(() => {
-    const saved = localStorage.getItem('app_current_user');
-    if (saved) {
-      try {
-        const parsed = JSON.parse(saved);
-        if (parsed?.id === 'usr_customer') {
-          return { ...parsed, name: 'Trần Khánh Đông' };
-        }
-        return parsed;
-      } catch (e) {
-        return null;
+    // Mới vào trang luôn KHÔNG tự động đăng nhập vào bất kỳ tài khoản nào cả
+    try {
+      // Dọn sạch dữ liệu tự động đăng nhập cũ còn lưu trong localStorage
+      localStorage.removeItem('app_current_user');
+      const sessionUser = sessionStorage.getItem('app_session_user');
+      if (sessionUser) {
+        return JSON.parse(sessionUser);
       }
+    } catch (e) {
+      return null;
     }
-    // Mặc định ban đầu chưa đăng nhập để người dùng thấy rõ nút Đăng nhập / Đăng ký
     return null;
   });
 
@@ -69,8 +67,9 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     if (currentUser) {
-      localStorage.setItem('app_current_user', JSON.stringify(currentUser));
+      sessionStorage.setItem('app_session_user', JSON.stringify(currentUser));
     } else {
+      sessionStorage.removeItem('app_session_user');
       localStorage.removeItem('app_current_user');
     }
   }, [currentUser]);
