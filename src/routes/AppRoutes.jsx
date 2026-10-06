@@ -20,6 +20,7 @@ import TrangThongTinCaNhan from '../pages/khach-hang/TrangThongTinCaNhan';
 // Auth Pages / Xac thuc
 import TrangDangNhap from '../pages/xac-thuc/TrangDangNhap';
 import TrangDangKy from '../pages/xac-thuc/TrangDangKy';
+import TrangTuChoiTruyCap from '../pages/xac-thuc/TrangTuChoiTruyCap';
 
 // Seller / Nguoi ban
 import BoCucNguoiBan from '../components/nguoi-ban/BoCucNguoiBan';
@@ -57,7 +58,7 @@ const ProtectedRoute = ({ allowedRoles, children }) => {
     return <Navigate to="/login" replace />;
   }
   if (allowedRoles && !allowedRoles.includes(currentUser.role)) {
-    return <Navigate to="/" replace />;
+    return <TrangTuChoiTruyCap />;
   }
   return children;
 };
@@ -77,6 +78,7 @@ export default function AppRoutes() {
         <Route path="/profile" element={<TrangThongTinCaNhan />} />
         <Route path="/login" element={<TrangDangNhap />} />
         <Route path="/register" element={<TrangDangKy />} />
+        <Route path="/access-denied" element={<TrangTuChoiTruyCap />} />
       </Route>
 
       {/* Seller Routes */}
