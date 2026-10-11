@@ -222,17 +222,6 @@ export default function Header() {
 
                     <div className="border-t border-slate-100 my-1"></div>
 
-                    {/* Nếu đang là khách, cho phép chuyển sang đăng nhập admin */}
-                    {!isAdmin && (
-                      <Link
-                        to="/login"
-                        className="flex items-center gap-2.5 px-4 py-2 text-xs text-purple-700 hover:bg-purple-50 font-semibold"
-                      >
-                        <Shield size={15} />
-                        Đăng nhập bằng Admin
-                      </Link>
-                    )}
-
                     <button
                       onClick={logout}
                       className="w-full flex items-center gap-2.5 px-4 py-2 text-xs text-rose-600 hover:bg-rose-50 font-semibold text-left cursor-pointer"

@@ -43,20 +43,8 @@ export default function RegisterPage() {
           <div className="w-12 h-12 rounded-2xl bg-orange-600 text-white flex items-center justify-center mx-auto shadow-md shadow-orange-500/20">
             <ShoppingBag size={24} />
           </div>
-          <h2 className="text-2xl font-black text-slate-900">Đăng Ký Tài Khoản Khách Hàng</h2>
-          <p className="text-xs text-slate-500">Tạo tài khoản để đặt mua đồ gia dụng và thanh toán bằng Mã QR tiện lợi</p>
-        </div>
-
-        {/* Thông báo quyền hạn rõ ràng */}
-        <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-[11px] text-amber-800 space-y-1">
-          <div className="flex items-center gap-1.5 font-bold">
-            <Info size={14} className="text-amber-600 shrink-0" />
-            <span>Phân quyền tài khoản:</span>
-          </div>
-          <p>
-            Tài khoản đăng ký tại đây là <b>Khách Hàng (Customer)</b> dùng để mua sắm, nhận mã giảm giá và quản lý đơn mua.
-            Tài khoản <b>Quản Trị Viên (Admin)</b> đã được cấu hình sẵn trên máy (email: <code className="bg-amber-100 px-1 rounded">admin@gmail.com</code> / pass: <code className="bg-amber-100 px-1 rounded">123</code>).
-          </p>
+          <h2 className="text-2xl font-black text-slate-900">Đăng Ký Tài Khoản Mua Hàng</h2>
+          <p className="text-xs text-slate-500">Tạo tài khoản nhanh chóng để tích điểm và đặt mua đồ gia dụng</p>
         </div>
 
         <form onSubmit={handleRegister} className="space-y-3.5 text-xs">
