@@ -5,6 +5,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import healthRoutes from './routes/healthRoutes.js';
 import authRoutes from './routes/authRoutes.js';
+import productRoutes from './routes/productRoutes.js';
 import { connectDB, getDBStatus } from './config/db.js';
 
 dotenv.config();
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Routes API v1
 app.use('/api/v1', healthRoutes);
 app.use('/api/v1/auth', authRoutes);
+app.use('/api/v1', productRoutes);
 
 // Endpoint kiểm tra kết nối Database
 app.get('/api/v1/db-status', (req, res) => {
@@ -35,7 +37,7 @@ app.get('/api/v1/db-status', (req, res) => {
     database: status.config.database,
     host: `${status.config.host}:${status.config.port}`,
     message: status.connected
-      ? 'Đã kết nối thành công tới Database MySQL gia_dung_shop'
+      ? 'Đã kết nối thành công tới Database MySQL giadungsmart'
       : 'Chưa kết nối được MySQL. Hãy khởi động dịch vụ MySQL (XAMPP) và kiểm tra file .env',
     schema: status.schema,
     timestamp: new Date().toISOString()

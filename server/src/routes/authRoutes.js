@@ -1,10 +1,13 @@
 import express from 'express';
-import { registerUser, getAllUsers } from '../controllers/authController.js';
+import { registerUser, loginUser, getAllUsers } from '../controllers/authController.js';
 
 const router = express.Router();
 
 // Tuyến đường Đăng ký tài khoản (Tự động ghi vào CSDL MySQL XAMPP)
 router.post('/register', registerUser);
+
+// Tuyến đường Đăng nhập (Xác thực từ CSDL MySQL XAMPP)
+router.post('/login', loginUser);
 
 // Tuyến đường Lấy danh sách người dùng từ CSDL MySQL
 router.get('/users', getAllUsers);

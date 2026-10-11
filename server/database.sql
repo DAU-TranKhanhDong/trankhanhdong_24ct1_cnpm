@@ -6,11 +6,11 @@
 --             gồm: Users, Products, Orders, Reviews, Promotions
 -- ============================================================
 
-CREATE DATABASE IF NOT EXISTS gia_dung_shop
+CREATE DATABASE IF NOT EXISTS giadungsmart
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE gia_dung_shop;
+USE giadungsmart;
 
 -- ============================================================
 -- BẢNG 1: NGƯỜI DÙNG (users)

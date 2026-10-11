@@ -67,7 +67,7 @@ export const getDBStatus = () => ({
     database: poolConfig.database,
     user: poolConfig.user
   },
-  schema: 'gia_dung_shop (Tables: users, products, orders, categories, brands, promotions)'
+  schema: 'giadungsmart (Tables: users, products, orders, categories, brands, promotions)'
 });
 
 export default pool;
