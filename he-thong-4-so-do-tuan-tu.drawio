@@ -1,0 +1,1237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-16T17:15:25.359Z" agent="Antigravity" version="24.0.0" type="device">
+
+  <diagram id="page_dangky" name="1. Đăng Ký (Register)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+    <mxCell id="banner_page_dangky" value="&lt;b style=&quot;font-size: 17px; color: #0F172A;&quot;&gt;BIỂU ĐỒ TUẦN TỰ (SEQUENCE DIAGRAM) - CHỨC NĂNG ĐĂNG KÝ TÀI KHOẢN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 12px; color: #475569;&quot;&gt;Chuẩn UML 3 Lớp (Boundary - Control - Entity - Database) • Actor: Người dùng • Website GiaDụngSmart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=1;arcSize=6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1320" height="60" as="geometry" />
+    </mxCell>
+  
+
+      <mxCell id="ll_top_page_dangky_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Khách hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="105" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_user" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="135" y="170" as="sourcePoint" />
+          <mxPoint x="135" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Khách hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="885" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangKy&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_boundary" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="365" y="170" as="sourcePoint" />
+          <mxPoint x="365" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangKy&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Logic Đăng ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_control" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="620" y="170" as="sourcePoint" />
+          <mxPoint x="620" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Logic Đăng ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_entity" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="875" y="170" as="sourcePoint" />
+          <mxPoint x="875" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="105" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_db" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1140" y="170" as="sourcePoint" />
+          <mxPoint x="1140" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="885" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+        <mxCell id="alt_box_page_dangky_0" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="1220" height="580" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangky_0" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="53" y="254" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangky_0" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Mật khẩu &amp;lt; 3 ký tự (Không hợp lệ tại Client)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="254" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangky_0" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="320" as="sourcePoint" />
+              <mxPoint x="1270" y="320" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangky_0" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Mật khẩu hợp lệ (&amp;gt;= 3 ký tự)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="325" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="alt_box_page_dangky_1" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="990" height="370" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangky_1" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="273" y="444" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangky_1" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Email đã tồn tại trong CSDL (Trùng lặp)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="444" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangky_1" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="270" y="530" as="sourcePoint" />
+              <mxPoint x="1260" y="530" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangky_1" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Email hợp lệ (Chưa tồn tại)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="290" y="535" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="act_page_dangky_100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="359" y="195" width="12" height="680" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="614" y="350" width="12" height="440" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="380" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_103" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="869" y="565" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_104" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="635" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_105" value="&lt;b style=&quot;font-size:11px;&quot;&gt;1: nhapThongTin(name, email, password, phone, address)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="141" y="195" as="sourcePoint" />
+            <mxPoint x="359" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_106" value="&lt;b style=&quot;font-size:11px;&quot;&gt;2: kiemTraClient(password.length &gt;= 3)&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.5;align=left;spacingLeft=10;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="371" y="225" as="sourcePoint" />
+            <mxPoint x="371" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="225" />
+              <mxPoint x="410" y="250" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_107" value="&lt;b style=&quot;font-size:11px;&quot;&gt;3: hienThiToastLoi(&quot;Mật khẩu phải từ 3 ký tự trở lên&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="285" as="sourcePoint" />
+            <mxPoint x="141" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_108" value="&lt;b style=&quot;font-size:11px;&quot;&gt;4: guiYeuCauDangKy(formData)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="371" y="350" as="sourcePoint" />
+            <mxPoint x="614" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_109" value="&lt;b style=&quot;font-size:11px;&quot;&gt;5: SELECT id FROM users WHERE LOWER(email) = ?&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="380" as="sourcePoint" />
+            <mxPoint x="1134" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_110" value="&lt;b style=&quot;font-size:11px;&quot;&gt;6: traVeKetQuaKiemTra()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#64748B;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1134" y="410" as="sourcePoint" />
+            <mxPoint x="626" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_111" value="&lt;b style=&quot;font-size:11px;&quot;&gt;7: traVeLoi409(&quot;Email đã được sử dụng, vui lòng chọn email khác!&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="470" as="sourcePoint" />
+            <mxPoint x="371" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_112" value="&lt;b style=&quot;font-size:11px;&quot;&gt;8: hienThiToastCanhBao(&quot;Email này đã được sử dụng&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="500" as="sourcePoint" />
+            <mxPoint x="141" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_113" value="&lt;b style=&quot;font-size:11px;&quot;&gt;9: new User(name, email, password, phone, role=&apos;customer&apos;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="565" as="sourcePoint" />
+            <mxPoint x="869" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_114" value="&lt;b style=&quot;font-size:11px;&quot;&gt;10: traVeThucTheUser(userObj)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="869" y="595" as="sourcePoint" />
+            <mxPoint x="626" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_115" value="&lt;b style=&quot;font-size:11px;&quot;&gt;11: INSERT INTO users (id, name, email, password, role, status) VALUES (...)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="635" as="sourcePoint" />
+            <mxPoint x="1134" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_116" value="&lt;b style=&quot;font-size:11px;&quot;&gt;12: xacNhanGhiBanGhiThanhCong()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1134" y="665" as="sourcePoint" />
+            <mxPoint x="626" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_117" value="&lt;b style=&quot;font-size:11px;&quot;&gt;13: traVe201Created(newUser)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="705" as="sourcePoint" />
+            <mxPoint x="371" y="705" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_118" value="&lt;b style=&quot;font-size:11px;&quot;&gt;14: hienThiToast(&quot;Đăng ký tài khoản Khách Hàng thành công!&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="740" as="sourcePoint" />
+            <mxPoint x="141" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_119" value="&lt;b style=&quot;font-size:11px;&quot;&gt;15: dieuHuongTrangChu(&quot;/&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="775" as="sourcePoint" />
+            <mxPoint x="141" y="775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+
+  <diagram id="page_dangnhap" name="2. Đăng Nhập (Login)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+    <mxCell id="banner_page_dangnhap" value="&lt;b style=&quot;font-size: 17px; color: #0F172A;&quot;&gt;BIỂU ĐỒ TUẦN TỰ (SEQUENCE DIAGRAM) - CHỨC NĂNG ĐĂNG NHẬP HỆ THỐNG&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 12px; color: #475569;&quot;&gt;Chuẩn UML 3 Lớp (Boundary - Control - Entity - Database) • Phân quyền Admin / Customer • Website GiaDụngSmart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=1;arcSize=6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1320" height="60" as="geometry" />
+    </mxCell>
+  
+
+      <mxCell id="ll_top_page_dangnhap_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng / Admin&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Đăng nhập&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="105" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangnhap_user" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="135" y="170" as="sourcePoint" />
+          <mxPoint x="135" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangnhap_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng / Admin&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Đăng nhập&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="885" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangnhap_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangNhap&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Nhập&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangnhap_boundary" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="365" y="170" as="sourcePoint" />
+          <mxPoint x="365" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangnhap_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangNhap&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Nhập&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangnhap_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xác thực &amp; Phiên làm việc&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangnhap_control" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="620" y="170" as="sourcePoint" />
+          <mxPoint x="620" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangnhap_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xác thực &amp; Phiên làm việc&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangnhap_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangnhap_entity" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="875" y="170" as="sourcePoint" />
+          <mxPoint x="875" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangnhap_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangnhap_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="105" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangnhap_db" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1140" y="170" as="sourcePoint" />
+          <mxPoint x="1140" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangnhap_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="885" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+        <mxCell id="alt_box_page_dangnhap_0" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="310" width="1220" height="530" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangnhap_0" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="53" y="314" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangnhap_0" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Tài khoản không tồn tại HOẶC Sai mật khẩu]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="314" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangnhap_0" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="410" as="sourcePoint" />
+              <mxPoint x="1270" y="410" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangnhap_0" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Xác thực thành công (Email &amp; Mật khẩu chính xác)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="415" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="alt_box_page_dangnhap_1" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="580" width="1220" height="240" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangnhap_1" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="53" y="584" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangnhap_1" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Tài khoản có role = &apos;admin&apos; (Quản trị viên)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="584" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangnhap_1" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="690" as="sourcePoint" />
+              <mxPoint x="1270" y="690" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangnhap_1" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Tài khoản có role = &apos;customer&apos; (Khách hàng mua sắm)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="695" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="act_page_dangnhap_100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="359" y="195" width="12" height="680" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangnhap_101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="614" y="235" width="12" height="350" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangnhap_102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="265" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangnhap_103" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="869" y="445" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_104" value="&lt;b style=&quot;font-size:11px;&quot;&gt;1: nhapEmailMatKhau(email, password) &amp; Bấm &quot;Đăng Nhập Ngay&quot;&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="141" y="195" as="sourcePoint" />
+            <mxPoint x="359" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_105" value="&lt;b style=&quot;font-size:11px;&quot;&gt;2: guiYeuCauDangNhap(email, password)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="371" y="235" as="sourcePoint" />
+            <mxPoint x="614" y="235" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_106" value="&lt;b style=&quot;font-size:11px;&quot;&gt;3: SELECT * FROM users WHERE LOWER(email) = ?&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="265" as="sourcePoint" />
+            <mxPoint x="1134" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_107" value="&lt;b style=&quot;font-size:11px;&quot;&gt;4: traVeThongTinNguoiDung(userData)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#64748B;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1134" y="295" as="sourcePoint" />
+            <mxPoint x="626" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_108" value="&lt;b style=&quot;font-size:11px;&quot;&gt;5: traVeLoi401(&quot;Email hoặc mật khẩu không chính xác&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="345" as="sourcePoint" />
+            <mxPoint x="371" y="345" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_109" value="&lt;b style=&quot;font-size:11px;&quot;&gt;6: hienThiToastLoi(&quot;Email hoặc mật khẩu không chính xác&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="375" as="sourcePoint" />
+            <mxPoint x="141" y="375" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_110" value="&lt;b style=&quot;font-size:11px;&quot;&gt;7: khoiTaoPhien(userData) -&gt; Lưu Session State&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="445" as="sourcePoint" />
+            <mxPoint x="869" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_111" value="&lt;b style=&quot;font-size:11px;&quot;&gt;8: traVePhienLamViec(userSession)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="869" y="475" as="sourcePoint" />
+            <mxPoint x="626" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_112" value="&lt;b style=&quot;font-size:11px;&quot;&gt;9: traVe200OK(user, role)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="520" as="sourcePoint" />
+            <mxPoint x="371" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_113" value="&lt;b style=&quot;font-size:11px;&quot;&gt;10: dieuHuong(&quot;/admin&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#7C3AED;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="615" as="sourcePoint" />
+            <mxPoint x="141" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_114" value="&lt;b style=&quot;font-size:11px;&quot;&gt;11: moBangDieuKhienAdmin(Toàn quyền quản trị)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#7C3AED;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="650" as="sourcePoint" />
+            <mxPoint x="141" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_115" value="&lt;b style=&quot;font-size:11px;&quot;&gt;12: dieuHuong(&quot;/&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#2563EB;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="725" as="sourcePoint" />
+            <mxPoint x="141" y="725" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangnhap_116" value="&lt;b style=&quot;font-size:11px;&quot;&gt;13: hienThiTenKhachHangTrenHeader(Sẵn sàng mua hàng)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#2563EB;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="760" as="sourcePoint" />
+            <mxPoint x="141" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+
+  <diagram id="page_dathang" name="3. Đặt Hàng &amp; VietQR (Order)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1550" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+    <mxCell id="banner_page_dathang" value="&lt;b style=&quot;font-size: 17px; color: #0F172A;&quot;&gt;BIỂU ĐỒ TUẦN TỰ (SEQUENCE DIAGRAM) - ĐẶT HÀNG &amp; THANH TOÁN VIETQR MBBANK&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 12px; color: #475569;&quot;&gt;Chuẩn UML 3 Lớp (Boundary - Control - Entity - Database) • Cổng VietQR Napas 247 • Website GiaDụngSmart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=1;arcSize=6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1470" height="60" as="geometry" />
+    </mxCell>
+  
+
+      <mxCell id="ll_top_page_dathang_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Khách hàng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Người mua hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="50" y="105" width="140" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_user" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="120" y="170" as="sourcePoint" />
+          <mxPoint x="120" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Khách hàng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Người mua hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="50" y="885" width="140" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_checkout" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangThanhToan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Thanh Toán&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="240" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_checkout" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="325" y="170" as="sourcePoint" />
+          <mxPoint x="325" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_checkout" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangThanhToan&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Thanh Toán&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="240" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_vietqr" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :KhungThanhToanVietQR&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Component VietQR MBBank&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="460" y="105" width="190" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_vietqr" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="555" y="170" as="sourcePoint" />
+          <mxPoint x="555" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_vietqr" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :KhungThanhToanVietQR&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Component VietQR MBBank&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="460" y="885" width="190" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_bank" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :App Ngân Hàng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Cổng VietQR Napas 247&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="700" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_bank" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="785" y="170" as="sourcePoint" />
+          <mxPoint x="785" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_bank" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :App Ngân Hàng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Cổng VietQR Napas 247&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="700" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :OrderController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Tạo Đơn &amp; Kho&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="920" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_control" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1010" y="170" as="sourcePoint" />
+          <mxPoint x="1010" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :OrderController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Tạo Đơn &amp; Kho&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="920" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :Order &amp; :OrderItem&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Đơn hàng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1145" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_entity" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1235" y="170" as="sourcePoint" />
+          <mxPoint x="1235" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :Order &amp; :OrderItem&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Đơn hàng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1145" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dathang_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: orders, order_items, products&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1365" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dathang_db" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1455" y="170" as="sourcePoint" />
+          <mxPoint x="1455" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dathang_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: orders, order_items, products&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1365" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+        <mxCell id="act_page_dathang_100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="319" y="195" width="12" height="680" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dathang_101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="549" y="230" width="12" height="490" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dathang_102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="779" y="305" width="12" height="50" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dathang_103" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1004" y="445" width="12" height="260" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dathang_104" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1229" y="480" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dathang_105" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1449" y="550" width="12" height="45" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_106" value="&lt;b style=&quot;font-size:11px;&quot;&gt;1: nhapThongTinGiaoHang &amp; Chọn &quot;Thanh toán VietQR MBBank&quot;&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="126" y="195" as="sourcePoint" />
+            <mxPoint x="319" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_107" value="&lt;b style=&quot;font-size:11px;&quot;&gt;2: khoiTaoKhungVietQR(soTien, maDonHang)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="331" y="230" as="sourcePoint" />
+            <mxPoint x="549" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_108" value="&lt;b style=&quot;font-size:11px;&quot;&gt;3: hienThiMaQR_MBBank(Chủ TK: TRAN KHANH DONG) + Đồng hồ đếm ngược&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#2563EB;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="549" y="265" as="sourcePoint" />
+            <mxPoint x="126" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_109" value="&lt;b style=&quot;font-size:11px;&quot;&gt;4: quetMaVaChuyenKhoanNapas247(Tự động điền STK &amp; Số tiền)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="126" y="305" as="sourcePoint" />
+            <mxPoint x="779" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_110" value="&lt;b style=&quot;font-size:11px;&quot;&gt;5: thongBaoChuyenTienThanhCong()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="779" y="340" as="sourcePoint" />
+            <mxPoint x="126" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_111" value="&lt;b style=&quot;font-size:11px;&quot;&gt;6: bamNut(&quot;Tôi đã chuyển khoản thành công&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="126" y="380" as="sourcePoint" />
+            <mxPoint x="549" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_112" value="&lt;b style=&quot;font-size:11px;&quot;&gt;7: kichHoatPhaoHoa(canvas-confetti)&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.5;align=left;spacingLeft=10;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="561" y="410" as="sourcePoint" />
+            <mxPoint x="561" y="435" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="600" y="410" />
+              <mxPoint x="600" y="435" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_113" value="&lt;b style=&quot;font-size:11px;&quot;&gt;8: guiYeuCauLuuDonHang(orderData, payment=&apos;BANK_QR&apos;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="561" y="445" as="sourcePoint" />
+            <mxPoint x="1004" y="445" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_114" value="&lt;b style=&quot;font-size:11px;&quot;&gt;9: new Order(customer_id, items, total, status=&apos;confirmed&apos;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1016" y="480" as="sourcePoint" />
+            <mxPoint x="1229" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_115" value="&lt;b style=&quot;font-size:11px;&quot;&gt;10: traVeThucTheDonHang(orderObj)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1229" y="510" as="sourcePoint" />
+            <mxPoint x="1016" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_116" value="&lt;b style=&quot;font-size:11px;&quot;&gt;11: INSERT INTO orders, order_items &amp; UPDATE products.stock&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1016" y="550" as="sourcePoint" />
+            <mxPoint x="1449" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_117" value="&lt;b style=&quot;font-size:11px;&quot;&gt;12: xacNhanGhiDuLieuDonHangThanhCong()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1449" y="580" as="sourcePoint" />
+            <mxPoint x="1016" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_118" value="&lt;b style=&quot;font-size:11px;&quot;&gt;13: clearCart() - Dọn sạch giỏ hàng&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.5;align=left;spacingLeft=10;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="1016" y="620" as="sourcePoint" />
+            <mxPoint x="1016" y="645" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1055" y="620" />
+              <mxPoint x="1055" y="645" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_119" value="&lt;b style=&quot;font-size:11px;&quot;&gt;14: traVe201Created(order_id)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1004" y="660" as="sourcePoint" />
+            <mxPoint x="561" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dathang_120" value="&lt;b style=&quot;font-size:11px;&quot;&gt;15: dieuHuongTrangDatHangThanhCong(Hiển thị chi tiết đơn hàng)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="549" y="700" as="sourcePoint" />
+            <mxPoint x="126" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+
+  <diagram id="page_sanpham" name="4. Quản Lý Sản Phẩm (Product)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1550" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+    <mxCell id="banner_page_sanpham" value="&lt;b style=&quot;font-size: 17px; color: #0F172A;&quot;&gt;BIỂU ĐỒ TUẦN TỰ (SEQUENCE DIAGRAM) - CHỨC NĂNG QUẢN LÝ SẢN PHẨM&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 12px; color: #475569;&quot;&gt;Chuẩn UML 3 Lớp (Boundary - Control - Entity - Database) • Phân quyền Admin • Website GiaDụngSmart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=1;arcSize=6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1470" height="60" as="geometry" />
+    </mxCell>
+  
+
+      <mxCell id="ll_top_page_sanpham_admin" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Quản trị viên (Admin)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Quản trị hệ thống&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="50" y="105" width="160" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_admin" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="130" y="170" as="sourcePoint" />
+          <mxPoint x="130" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_admin" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Quản trị viên (Admin)&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Quản trị hệ thống&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="50" y="885" width="160" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_sanpham_ui" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :QuanLySanPham&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Admin Quản Lý SP&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="260" y="105" width="175" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_ui" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="347.5" y="170" as="sourcePoint" />
+          <mxPoint x="347.5" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_ui" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :QuanLySanPham&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Admin Quản Lý SP&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="260" y="885" width="175" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_sanpham_guard" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :AppRoutes&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảo vệ Route (ProtectedRoute)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="485" y="105" width="185" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_guard" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="577.5" y="170" as="sourcePoint" />
+          <mxPoint x="577.5" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_guard" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :AppRoutes&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảo vệ Route (ProtectedRoute)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="485" y="885" width="185" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_sanpham_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :ProductController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý CRUD Sản phẩm&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="720" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_control" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="810" y="170" as="sourcePoint" />
+          <mxPoint x="810" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :ProductController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý CRUD Sản phẩm&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="720" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_sanpham_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :Product&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Sản phẩm (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="955" y="105" width="175" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_entity" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1042.5" y="170" as="sourcePoint" />
+          <mxPoint x="1042.5" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :Product&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Sản phẩm (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="955" y="885" width="175" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_sanpham_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: products, categories (3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1180" y="105" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_sanpham_db" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1280" y="170" as="sourcePoint" />
+          <mxPoint x="1280" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_sanpham_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: products, categories (3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1180" y="885" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+        <mxCell id="alt_box_page_sanpham_0" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="40" y="245" width="1350" height="590" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_sanpham_0" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="43" y="249" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_sanpham_0" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Người dùng không phải Admin (role != &apos;admin&apos;)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="95" y="249" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_sanpham_0" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="40" y="340" as="sourcePoint" />
+              <mxPoint x="1390" y="340" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_sanpham_0" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Admin hợp lệ (role == &apos;admin&apos;)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="60" y="345" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="alt_box_page_sanpham_1" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="250" y="475" width="1140" height="345" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_sanpham_1" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="253" y="479" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_sanpham_1" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Dữ liệu không hợp lệ (Tên rỗng, Giá &amp;lt;= 0, Kho &amp;lt; 0)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="305" y="479" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_sanpham_1" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="250" y="565" as="sourcePoint" />
+              <mxPoint x="1390" y="565" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_sanpham_1" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Dữ liệu sản phẩm hợp lệ]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="270" y="570" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="act_page_sanpham_100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="341.5" y="190" width="12" height="680" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_sanpham_101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="571.5" y="220" width="12" height="140" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_sanpham_102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="804" y="435" width="12" height="370" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_sanpham_103" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1036.5" y="595" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_sanpham_104" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1274" y="665" width="12" height="45" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_105" value="&lt;b style=&quot;font-size:11px;&quot;&gt;1: truyCapTrangQuanLy(/admin/products)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="136" y="190" as="sourcePoint" />
+            <mxPoint x="341.5" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_106" value="&lt;b style=&quot;font-size:11px;&quot;&gt;2: kiemTraQuyenHan(currentUser.role)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="353.5" y="220" as="sourcePoint" />
+            <mxPoint x="571.5" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_107" value="&lt;b style=&quot;font-size:11px;&quot;&gt;3: chanQuyenVaDieuHuong(Trang 403 TuChoiTruyCap)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="571.5" y="275" as="sourcePoint" />
+            <mxPoint x="353.5" y="275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_108" value="&lt;b style=&quot;font-size:11px;&quot;&gt;4: hienThiThongBaoTuChoiTruyCap()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="341.5" y="305" as="sourcePoint" />
+            <mxPoint x="136" y="305" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_109" value="&lt;b style=&quot;font-size:11px;&quot;&gt;5: choPhepTruyCapVaHienThiGiaoDien()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="571.5" y="365" as="sourcePoint" />
+            <mxPoint x="353.5" y="365" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_110" value="&lt;b style=&quot;font-size:11px;&quot;&gt;6: nhapThongTinSanPham(name, category, price, stock, img) &amp; Bấm &quot;Thêm&quot;&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="136" y="405" as="sourcePoint" />
+            <mxPoint x="341.5" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_111" value="&lt;b style=&quot;font-size:11px;&quot;&gt;7: guiRequest(POST /api/v1/products, productData)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="353.5" y="435" as="sourcePoint" />
+            <mxPoint x="804" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_112" value="&lt;b style=&quot;font-size:11px;&quot;&gt;8: kiemTraDuLieuDauVao(name, price &gt; 0, stock &gt;= 0)&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.5;align=left;spacingLeft=10;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="816" y="465" as="sourcePoint" />
+            <mxPoint x="816" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="855" y="465" />
+              <mxPoint x="855" y="490" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_113" value="&lt;b style=&quot;font-size:11px;&quot;&gt;9: traVeLoi400(&quot;Dữ liệu sản phẩm không hợp lệ&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="804" y="510" as="sourcePoint" />
+            <mxPoint x="353.5" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_114" value="&lt;b style=&quot;font-size:11px;&quot;&gt;10: hienThiToastLoi(&quot;Vui lòng kiểm tra lại thông tin sản phẩm&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="341.5" y="535" as="sourcePoint" />
+            <mxPoint x="136" y="535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_115" value="&lt;b style=&quot;font-size:11px;&quot;&gt;11: new Product(name, category_id, price, stock, thumbnail, status=&apos;active&apos;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="816" y="595" as="sourcePoint" />
+            <mxPoint x="1036.5" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_116" value="&lt;b style=&quot;font-size:11px;&quot;&gt;12: traVeThucTheSanPham(productObj)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1036.5" y="625" as="sourcePoint" />
+            <mxPoint x="816" y="625" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_117" value="&lt;b style=&quot;font-size:11px;&quot;&gt;13: INSERT INTO products (id, name, category_id, price, stock, thumbnail, status) VALUES (...)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="816" y="665" as="sourcePoint" />
+            <mxPoint x="1274" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_118" value="&lt;b style=&quot;font-size:11px;&quot;&gt;14: xacNhanLuuSanPhamThanhCong()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1274" y="695" as="sourcePoint" />
+            <mxPoint x="816" y="695" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_119" value="&lt;b style=&quot;font-size:11px;&quot;&gt;15: traVe201Created(newProduct)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="804" y="735" as="sourcePoint" />
+            <mxPoint x="353.5" y="735" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_sanpham_120" value="&lt;b style=&quot;font-size:11px;&quot;&gt;16: capNhatDanhSachVaToast(&quot;Thêm sản phẩm mới thành công!&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="341.5" y="770" as="sourcePoint" />
+            <mxPoint x="136" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+</mxfile>

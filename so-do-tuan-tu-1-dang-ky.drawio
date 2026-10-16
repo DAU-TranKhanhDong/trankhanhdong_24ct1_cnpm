@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-10-16T17:15:25.408Z" agent="Antigravity" version="24.0.0" type="device">
+
+  <diagram id="page_dangky" name="1. Đăng Ký (Register)">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+    <mxCell id="banner_page_dangky" value="&lt;b style=&quot;font-size: 17px; color: #0F172A;&quot;&gt;BIỂU ĐỒ TUẦN TỰ (SEQUENCE DIAGRAM) - CHỨC NĂNG ĐĂNG KÝ TÀI KHOẢN&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 12px; color: #475569;&quot;&gt;Chuẩn UML 3 Lớp (Boundary - Control - Entity - Database) • Actor: Người dùng • Website GiaDụngSmart&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#CBD5E1;strokeWidth=1.5;shadow=1;arcSize=6;align=center;" vertex="1" parent="1">
+      <mxGeometry x="40" y="20" width="1320" height="60" as="geometry" />
+    </mxCell>
+  
+
+      <mxCell id="ll_top_page_dangky_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Khách hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="105" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_user" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="135" y="170" as="sourcePoint" />
+          <mxPoint x="135" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_user" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #2563EB;&quot;&gt;&amp;lt;&amp;lt;actor&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;👤 Người dùng&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Actor: Khách hàng&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=#2563EB;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="60" y="885" width="150" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangKy&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_boundary" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="365" y="170" as="sourcePoint" />
+          <mxPoint x="365" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_boundary" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #059669;&quot;&gt;&amp;lt;&amp;lt;boundary&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🖥️ :TrangDangKy&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;UI Form Đăng Ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ECFDF5;strokeColor=#059669;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="280" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Logic Đăng ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="105" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_control" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="620" y="170" as="sourcePoint" />
+          <mxPoint x="620" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_control" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #7C3AED;&quot;&gt;&amp;lt;&amp;lt;control&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;⚙️ :AuthController&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Xử lý Logic Đăng ký&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="530" y="885" width="180" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="105" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_entity" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="875" y="170" as="sourcePoint" />
+          <mxPoint x="875" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_entity" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #D97706;&quot;&gt;&amp;lt;&amp;lt;entity&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;💎 :User&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Thực thể Người dùng (Model)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFBEB;strokeColor=#D97706;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="790" y="885" width="170" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="ll_top_page_dangky_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="105" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+      <mxCell id="line_page_dangky_db" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#94A3B8;dashPattern=5 5;" edge="1" parent="1">
+        <mxGeometry width="50" height="50" relative="1" as="geometry">
+          <mxPoint x="1140" y="170" as="sourcePoint" />
+          <mxPoint x="1140" y="885" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    
+
+      <mxCell id="ll_bot_page_dangky_db" value="&lt;span style=&quot;font-size: 11px; font-weight: bold; color: #DC2626;&quot;&gt;&amp;lt;&amp;lt;database&amp;gt;&amp;gt;&lt;/span&gt;&lt;br/&gt;&lt;b style=&quot;font-size: 13px;&quot;&gt;🗄️ :MySQL Database&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 10px; color: #64748B;&quot;&gt;Bảng: users (Port 3306)&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEF2F2;strokeColor=#DC2626;strokeWidth=2;shadow=1;arcSize=8;align=center;" vertex="1" parent="1">
+        <mxGeometry x="1040" y="885" width="200" height="65" as="geometry" />
+      </mxCell>
+    
+
+        <mxCell id="alt_box_page_dangky_0" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="50" y="250" width="1220" height="580" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangky_0" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="53" y="254" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangky_0" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Mật khẩu &amp;lt; 3 ký tự (Không hợp lệ tại Client)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="105" y="254" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangky_0" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="50" y="320" as="sourcePoint" />
+              <mxPoint x="1270" y="320" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangky_0" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Mật khẩu hợp lệ (&amp;gt;= 3 ký tự)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="70" y="325" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="alt_box_page_dangky_1" value="" style="shape=umlFrame;whiteSpace=wrap;html=1;width=50;height=28;boundedLbl=1;verticalAlign=top;align=left;spacingLeft=8;fillColor=#FAFAFA;strokeColor=#475569;strokeWidth=1.5;arcSize=4;" vertex="1" parent="1">
+          <mxGeometry x="270" y="440" width="990" height="370" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_tag_page_dangky_1" value="&lt;b style=&quot;font-size:12px; color:#1E293B;&quot;&gt;alt&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="273" y="444" width="40" height="20" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="alt_guard1_page_dangky_1" value="&lt;b style=&quot;color:#DC2626; font-size:11px;&quot;&gt;[Email đã tồn tại trong CSDL (Trùng lặp)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="325" y="444" width="420" height="20" as="geometry" />
+        </mxCell>
+      
+
+          <mxCell id="alt_div_page_dangky_1" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=1.5;strokeColor=#64748B;dashPattern=6 4;" edge="1" parent="1">
+            <mxGeometry width="50" height="50" relative="1" as="geometry">
+              <mxPoint x="270" y="530" as="sourcePoint" />
+              <mxPoint x="1260" y="530" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        
+
+          <mxCell id="alt_guard2_page_dangky_1" value="&lt;b style=&quot;color:#059669; font-size:11px;&quot;&gt;[Email hợp lệ (Chưa tồn tại)]&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+            <mxGeometry x="290" y="535" width="420" height="20" as="geometry" />
+          </mxCell>
+        
+
+        <mxCell id="act_page_dangky_100" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="359" y="195" width="12" height="680" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_101" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="614" y="350" width="12" height="440" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_102" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="380" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_103" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="869" y="565" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="act_page_dangky_104" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#475569;strokeWidth=1.5;" vertex="1" parent="1">
+          <mxGeometry x="1134" y="635" width="12" height="40" as="geometry" />
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_105" value="&lt;b style=&quot;font-size:11px;&quot;&gt;1: nhapThongTin(name, email, password, phone, address)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="141" y="195" as="sourcePoint" />
+            <mxPoint x="359" y="195" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_106" value="&lt;b style=&quot;font-size:11px;&quot;&gt;2: kiemTraClient(password.length &gt;= 3)&lt;/b&gt;" style="edgeStyle=orthogonalEdgeStyle;curved=0;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0F172A;strokeWidth=1.5;align=left;spacingLeft=10;verticalAlign=middle;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-15" relative="1" as="geometry">
+            <mxPoint x="371" y="225" as="sourcePoint" />
+            <mxPoint x="371" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="410" y="225" />
+              <mxPoint x="410" y="250" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_107" value="&lt;b style=&quot;font-size:11px;&quot;&gt;3: hienThiToastLoi(&quot;Mật khẩu phải từ 3 ký tự trở lên&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="285" as="sourcePoint" />
+            <mxPoint x="141" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_108" value="&lt;b style=&quot;font-size:11px;&quot;&gt;4: guiYeuCauDangKy(formData)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="371" y="350" as="sourcePoint" />
+            <mxPoint x="614" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_109" value="&lt;b style=&quot;font-size:11px;&quot;&gt;5: SELECT id FROM users WHERE LOWER(email) = ?&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="380" as="sourcePoint" />
+            <mxPoint x="1134" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_110" value="&lt;b style=&quot;font-size:11px;&quot;&gt;6: traVeKetQuaKiemTra()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#64748B;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1134" y="410" as="sourcePoint" />
+            <mxPoint x="626" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_111" value="&lt;b style=&quot;font-size:11px;&quot;&gt;7: traVeLoi409(&quot;Email đã được sử dụng, vui lòng chọn email khác!&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="470" as="sourcePoint" />
+            <mxPoint x="371" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_112" value="&lt;b style=&quot;font-size:11px;&quot;&gt;8: hienThiToastCanhBao(&quot;Email này đã được sử dụng&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#DC2626;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="500" as="sourcePoint" />
+            <mxPoint x="141" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_113" value="&lt;b style=&quot;font-size:11px;&quot;&gt;9: new User(name, email, password, phone, role=&apos;customer&apos;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="565" as="sourcePoint" />
+            <mxPoint x="869" y="565" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_114" value="&lt;b style=&quot;font-size:11px;&quot;&gt;10: traVeThucTheUser(userObj)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="869" y="595" as="sourcePoint" />
+            <mxPoint x="626" y="595" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_115" value="&lt;b style=&quot;font-size:11px;&quot;&gt;11: INSERT INTO users (id, name, email, password, role, status) VALUES (...)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;strokeColor=#0F172A;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="626" y="635" as="sourcePoint" />
+            <mxPoint x="1134" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_116" value="&lt;b style=&quot;font-size:11px;&quot;&gt;12: xacNhanGhiBanGhiThanhCong()&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="1134" y="665" as="sourcePoint" />
+            <mxPoint x="626" y="665" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_117" value="&lt;b style=&quot;font-size:11px;&quot;&gt;13: traVe201Created(newUser)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="614" y="705" as="sourcePoint" />
+            <mxPoint x="371" y="705" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_118" value="&lt;b style=&quot;font-size:11px;&quot;&gt;14: hienThiToast(&quot;Đăng ký tài khoản Khách Hàng thành công!&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="740" as="sourcePoint" />
+            <mxPoint x="141" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+
+        <mxCell id="msg_page_dangky_119" value="&lt;b style=&quot;font-size:11px;&quot;&gt;15: dieuHuongTrangChu(&quot;/&quot;)&lt;/b&gt;" style="edgeStyle=none;curved=0;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endSize=8;dashed=1;dashPattern=5 3;strokeColor=#059669;strokeWidth=1.5;verticalAlign=bottom;align=center;labelBackgroundColor=#FFFFFF;labelBorderColor=none;" edge="1" parent="1">
+          <mxGeometry width="80" relative="1" as="geometry">
+            <mxPoint x="359" y="775" as="sourcePoint" />
+            <mxPoint x="141" y="775" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      
+      </root>
+    </mxGraphModel>
+  </diagram>
+  
+</mxfile>
