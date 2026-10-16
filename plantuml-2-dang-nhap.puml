@@ -1,0 +1,48 @@
+@startuml
+title BIỂU ĐỒ TUẦN TỰ - CHỨC NĂNG ĐĂNG NHẬP HỆ THỐNG (GiaDụngSmart)
+skinparam style strictuml
+skinparam sequenceMessageAlign center
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+autonumber "<b>[00]</b>"
+
+actor "Người dùng / Admin" as User
+boundary ":TrangDangNhap\n(UI Đăng nhập)" as UI
+control ":AuthController\n(Xác thực & Phiên)" as Ctrl
+entity ":User\n(Thực thể Model)" as Entity
+database ":MySQL Database\n(Bảng: users)" as DB
+
+User -> UI : nhapEmailMatKhau(email, password) & Bấm "Đăng Nhập Ngay"
+activate UI
+
+UI -> Ctrl : guiYeuCauDangNhap(email, password)
+activate Ctrl
+
+Ctrl -> DB : SELECT * FROM users WHERE LOWER(email) = ?
+activate DB
+DB --> Ctrl : traVeThongTinNguoiDung(userData)
+deactivate DB
+
+alt Tài khoản không tồn tại HOẶC Sai mật khẩu
+    Ctrl --> UI : Trả về lỗi 401 Unauthorized ("Email hoặc mật khẩu không chính xác")
+    UI --> User : Hiển thị Toast lỗi: "Email hoặc mật khẩu không chính xác"
+else Xác thực thành công (Email & Mật khẩu chính xác)
+    Ctrl -> Entity : setSession(userData) -> Lưu Session State
+    activate Entity
+    Entity --> Ctrl : traVePhienLamViec(userSession)
+    deactivate Entity
+
+    Ctrl --> UI : Trả về mã 200 OK (user, role)
+    deactivate Ctrl
+
+    alt Tài khoản có role = 'admin' (Quản trị viên)
+        UI --> User : dieuHuong("/admin")
+        UI --> User : Mở Bảng điều khiển Quản trị viên (Toàn quyền quản trị)
+    else Tài khoản có role = 'customer' (Khách hàng)
+        UI --> User : dieuHuong("/")
+        UI --> User : Hiển thị tên khách hàng trên Thanh tiêu đề Header
+    end
+end
+deactivate UI
+
+@enduml

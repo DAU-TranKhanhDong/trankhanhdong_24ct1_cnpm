@@ -1,0 +1,54 @@
+@startuml
+title BIỂU ĐỒ TUẦN TỰ - ĐẶT HÀNG & THANH TOÁN VIETQR MBBANK (GiaDụngSmart)
+skinparam style strictuml
+skinparam sequenceMessageAlign center
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+autonumber "<b>[00]</b>"
+
+actor "Khách hàng" as User
+boundary ":TrangThanhToan\n(UI Thanh toán)" as UI
+boundary ":KhungVietQR\n(Component MBBank)" as QR
+boundary ":App Ngân Hàng\n(VietQR Napas 247)" as Bank
+control ":OrderController\n(Xử lý đơn hàng)" as Ctrl
+entity ":Order & :OrderItem\n(Thực thể Model)" as Entity
+database ":MySQL Database\n(orders, products)" as DB
+
+User -> UI : nhapThongTinGiaoHang & Chọn "Thanh toán VietQR MBBank"
+activate UI
+
+UI -> QR : khoiTaoKhungVietQR(soTien, maDonHang)
+activate QR
+
+QR --> User : hienThiMaQR_MBBank(Chủ TK: TRAN KHANH DONG) + Đồng hồ đếm ngược
+User -> Bank : quetMaVaChuyenKhoanNapas247(Tự động điền STK & Số tiền)
+activate Bank
+Bank --> User : thongBaoChuyenTienThanhCong()
+deactivate Bank
+
+User -> QR : bamNut("Tôi đã chuyển khoản thành công")
+QR -> QR : kichHoatPhaoHoa(canvas-confetti)
+
+QR -> Ctrl : guiYeuCauLuuDonHang(orderData, payment='BANK_QR')
+activate Ctrl
+
+Ctrl -> Entity : new Order(customer_id, items, total, status='confirmed')
+activate Entity
+Entity --> Ctrl : traVeThucTheDonHang(orderObj)
+deactivate Entity
+
+Ctrl -> DB : INSERT INTO orders, order_items & UPDATE products.stock
+activate DB
+DB --> Ctrl : xacNhanGhiDuLieuDonHangThanhCong()
+deactivate DB
+
+Ctrl -> Ctrl : clearCart() - Dọn sạch giỏ hàng
+
+Ctrl --> QR : Trả về mã 201 Created (order_id)
+deactivate Ctrl
+
+QR --> User : dieuHuongTrangDatHangThanhCong(Hiển thị chi tiết đơn hàng)
+deactivate QR
+deactivate UI
+
+@enduml

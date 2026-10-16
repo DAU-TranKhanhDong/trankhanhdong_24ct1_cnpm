@@ -1,0 +1,57 @@
+@startuml
+title BIỂU ĐỒ TUẦN TỰ - CHỨC NĂNG QUẢN LÝ SẢN PHẨM (GiaDụngSmart)
+skinparam style strictuml
+skinparam sequenceMessageAlign center
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+autonumber "<b>[00]</b>"
+
+actor "Quản trị viên (Admin)" as Admin
+boundary ":QuanLySanPham\n(UI Admin)" as UI
+boundary ":AppRoutes\n(ProtectedRoute)" as Guard
+control ":ProductController\n(Xử lý CRUD)" as Ctrl
+entity ":Product\n(Thực thể Model)" as Entity
+database ":MySQL Database\n(Bảng: products)" as DB
+
+Admin -> UI : truyCapTrangQuanLy(/admin/products)
+activate UI
+
+UI -> Guard : kiemTraQuyenHan(currentUser.role)
+activate Guard
+
+alt Người dùng không phải Admin (role != 'admin')
+    Guard --> UI : chanQuyenVaDieuHuong(Trang 403 TuChoiTruyCap)
+    UI --> Admin : Hiển thị thông báo Từ chối truy cập
+else Admin hợp lệ (role == 'admin')
+    Guard --> UI : choPhepTruyCapVaHienThiGiaoDien()
+    deactivate Guard
+
+    Admin -> UI : nhapThongTinSanPham(name, category, price, stock, img) & Bấm "Thêm"
+    UI -> Ctrl : guiRequest(POST /api/v1/products, productData)
+    activate Ctrl
+
+    Ctrl -> Ctrl : kiemTraDuLieuDauVao(name, price > 0, stock >= 0)
+
+    alt Dữ liệu không hợp lệ (Tên rỗng, Giá <= 0, Kho < 0)
+        Ctrl --> UI : Trả về lỗi 400 Bad Request ("Dữ liệu không hợp lệ")
+        UI --> Admin : Hiển thị Toast lỗi: "Vui lòng kiểm tra lại thông tin sản phẩm"
+    else Dữ liệu sản phẩm hợp lệ
+        Ctrl -> Entity : new Product(name, category_id, price, stock, thumbnail, status='active')
+        activate Entity
+        Entity --> Ctrl : traVeThucTheSanPham(productObj)
+        deactivate Entity
+
+        Ctrl -> DB : INSERT INTO products (id, name, category_id, price, stock, thumbnail, status) VALUES (...)
+        activate DB
+        DB --> Ctrl : xacNhanLuuSanPhamThanhCong()
+        deactivate DB
+
+        Ctrl --> UI : Trả về mã 201 Created (newProduct)
+        deactivate Ctrl
+
+        UI --> Admin : Cập nhật lại danh sách & Hiển thị Toast: "Thêm sản phẩm mới thành công!"
+    end
+end
+deactivate UI
+
+@enduml

@@ -1,0 +1,53 @@
+@startuml
+title BIỂU ĐỒ TUẦN TỰ - CHỨC NĂNG ĐĂNG KÝ TÀI KHOẢN (GiaDụngSmart)
+skinparam style strictuml
+skinparam sequenceMessageAlign center
+skinparam BoxPadding 10
+skinparam ParticipantPadding 10
+autonumber "<b>[00]</b>"
+
+actor "Người dùng" as User
+boundary ":TrangDangKy\n(UI Đăng ký)" as UI
+control ":AuthController\n(Xử lý nghiệp vụ)" as Ctrl
+entity ":User\n(Thực thể Model)" as Entity
+database ":MySQL Database\n(Bảng: users)" as DB
+
+User -> UI : nhapThongTin(name, email, password, phone, address)
+activate UI
+UI -> UI : kiemTraClient(password.length >= 3)
+
+alt Mật khẩu < 3 ký tự (Không hợp lệ tại Client)
+    UI --> User : Hiển thị Toast lỗi: "Mật khẩu phải từ 3 ký tự trở lên"
+else Mật khẩu hợp lệ (>= 3 ký tự)
+    UI -> Ctrl : guiYeuCauDangKy(POST /api/v1/auth/register)
+    activate Ctrl
+
+    Ctrl -> DB : SELECT id FROM users WHERE LOWER(email) = ?
+    activate DB
+    DB --> Ctrl : traVeKetQuaKiemTra()
+    deactivate DB
+
+    alt Email đã tồn tại trong CSDL (Trùng lặp)
+        Ctrl --> UI : Trả về lỗi 409 Conflict ("Email này đã được sử dụng")
+        UI --> User : Hiển thị Toast cảnh báo: "Email này đã được sử dụng"
+    else Email hợp lệ (Chưa tồn tại trong CSDL)
+        Ctrl -> Entity : new User(name, email, password, phone, role='customer')
+        activate Entity
+        Entity --> Ctrl : traVeThucTheUser(userObj)
+        deactivate Entity
+
+        Ctrl -> DB : INSERT INTO users (id, name, email, password, phone, role, status) VALUES (...)
+        activate DB
+        DB --> Ctrl : xacNhanGhiBanGhiThanhCong()
+        deactivate DB
+
+        Ctrl --> UI : Trả về mã 201 Created (newUser)
+        deactivate Ctrl
+
+        UI --> User : Hiển thị Toast: "Đăng ký tài khoản Khách Hàng thành công!"
+        UI --> User : Tự động điều hướng về Trang Chủ ("/")
+    end
+end
+deactivate UI
+
+@enduml
