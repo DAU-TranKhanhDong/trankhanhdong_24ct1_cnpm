@@ -4,14 +4,22 @@
  * Thứ tự ưu tiên:
  * 1. URL tùy chỉnh do người dùng nhập (lưu trong localStorage 'app_custom_api_url')
  * 2. Biến môi trường VITE_API_URL từ file .env / Netlify
- * 3. Mặc định chạy nội bộ: 'http://localhost:3000'
+ * 3. Tự động kết nối Cloudflare Tunnel khi chạy trên website online
+ * 4. Mặc định chạy nội bộ: 'http://localhost:3000'
  */
+
+export const DEFAULT_ONLINE_API_URL = 'https://developing-explanation-out-contains.trycloudflare.com';
 
 export const getApiBaseUrl = () => {
   if (typeof window !== 'undefined') {
     const custom = localStorage.getItem('app_custom_api_url');
     if (custom && custom.trim()) {
       return custom.trim().replace(/\/+$/, '');
+    }
+
+    // Nếu đang chạy trên website online (Netlify) và chưa có URL tùy chỉnh, dùng mặc định Tunnel
+    if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+      return (import.meta.env.VITE_API_URL || DEFAULT_ONLINE_API_URL).replace(/\/+$/, '');
     }
   }
   return (import.meta.env.VITE_API_URL || 'http://localhost:3000').replace(/\/+$/, '');

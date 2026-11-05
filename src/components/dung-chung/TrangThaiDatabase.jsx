@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Database, CheckCircle2, AlertCircle, RefreshCw, Globe, Settings, ExternalLink } from 'lucide-react';
+import { Database, CheckCircle2, AlertCircle, RefreshCw, Globe, Settings, EyeOff } from 'lucide-react';
 import { getApiBaseUrl, setCustomApiUrl, checkDatabaseStatus } from '../../config/api';
 
 export default function TrangThaiDatabase() {
@@ -8,6 +8,9 @@ export default function TrangThaiDatabase() {
   const [inputUrl, setInputUrl] = useState('');
   const [testing, setTesting] = useState(false);
   const [feedback, setFeedback] = useState(null);
+  const [isHidden, setIsHidden] = useState(() => {
+    return localStorage.getItem('hide_db_badge') === 'true';
+  });
 
   const fetchStatus = async () => {
     setStatus(prev => ({ ...prev, loading: true }));
@@ -28,8 +31,16 @@ export default function TrangThaiDatabase() {
       fetchStatus();
     };
 
+    const handleOpenFromFooter = () => {
+      handleOpenModal();
+    };
+
     window.addEventListener('api_url_changed', handleUrlChange);
-    return () => window.removeEventListener('api_url_changed', handleUrlChange);
+    window.addEventListener('open_db_modal', handleOpenFromFooter);
+    return () => {
+      window.removeEventListener('api_url_changed', handleUrlChange);
+      window.removeEventListener('open_db_modal', handleOpenFromFooter);
+    };
   }, []);
 
   const handleOpenModal = () => {
@@ -70,29 +81,48 @@ export default function TrangThaiDatabase() {
   const handleReset = () => {
     setCustomApiUrl('');
     setInputUrl('http://localhost:3000');
-    setFeedback({ type: 'info', message: 'Đã hoàn tác về địa chỉ mặc định (localhost:3000)' });
+    setFeedback({ type: 'info', message: 'Đã hoàn tác về địa chỉ mặc định' });
     setTimeout(() => {
       fetchStatus();
     }, 200);
   };
 
+  const toggleHide = (e) => {
+    e.stopPropagation();
+    const next = !isHidden;
+    setIsHidden(next);
+    localStorage.setItem('hide_db_badge', String(next));
+  };
+
   return (
     <>
-      {/* Nút bấm trạng thái nhỏ gọn nằm trên Topbar hoặc góc trang */}
-      <button
-        onClick={handleOpenModal}
-        className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold transition-all border shadow-sm cursor-pointer ${
-          status.connected
-            ? 'bg-emerald-950/80 text-emerald-300 border-emerald-500/50 hover:bg-emerald-900'
-            : 'bg-amber-950/70 text-amber-300 border-amber-500/40 hover:bg-amber-900'
-        }`}
-        title="Bấm để kiểm tra hoặc kết nối CSDL MySQL qua Cloudflare"
-      >
-        <span className={`w-2 h-2 rounded-full animate-pulse ${status.connected ? 'bg-emerald-400' : 'bg-amber-400'}`} />
-        <Database size={12} />
-        <span>{status.connected ? 'MySQL: Đã kết nối' : 'CSDL: Demo Local'}</span>
-        <Settings size={10} className="opacity-70 ml-0.5" />
-      </button>
+      {/* Nút bấm tinh gọn dạng Floating Widget ở góc dưới bên trái màn hình */}
+      {!isHidden && (
+        <div className="fixed bottom-3 left-3 z-40 group">
+          <button
+            onClick={handleOpenModal}
+            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-[11px] font-semibold transition-all shadow-md backdrop-blur-md cursor-pointer border opacity-30 hover:opacity-100 ${
+              status.connected
+                ? 'bg-slate-900/90 text-emerald-400 border-emerald-500/40 hover:bg-slate-900'
+                : 'bg-slate-900/90 text-amber-400 border-amber-500/40 hover:bg-slate-900'
+            }`}
+            title="Bấm để xem/cấu hình kết nối CSDL MySQL"
+          >
+            <span className={`w-2 h-2 rounded-full ${status.connected ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
+            <Database size={12} />
+            <span className="hidden group-hover:inline transition-all duration-200">
+              {status.connected ? 'MySQL Online' : 'CSDL Demo'}
+            </span>
+            <span
+              onClick={toggleHide}
+              title="Ẩn nút này khỏi màn hình (vẫn mở lại được ở cuối chân trang)"
+              className="ml-1 text-slate-400 hover:text-white hidden group-hover:inline p-0.5"
+            >
+              <EyeOff size={11} />
+            </span>
+          </button>
+        </div>
+      )}
 
       {/* Modal Cấu hình Kết nối CSDL */}
       {isOpen && (
@@ -111,7 +141,7 @@ export default function TrangThaiDatabase() {
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg text-lg leading-none"
+                className="text-slate-400 hover:text-white p-1 rounded-lg text-lg leading-none cursor-pointer"
               >
                 ✕
               </button>
@@ -137,7 +167,7 @@ export default function TrangThaiDatabase() {
                       ? 'Đang kết nối CSDL MySQL thành công!'
                       : 'Đang ở chế độ lưu trữ trình duyệt (LocalStorage)'}
                   </p>
-                  <p className="mt-0.5 text-slate-600">
+                  <p className="mt-0.5 text-slate-600 break-all">
                     Địa chỉ Backend hiện tại:{' '}
                     <code className="bg-white/80 px-1 py-0.5 rounded font-mono text-[11px] text-slate-800 border border-slate-300">
                       {status.url}
@@ -152,17 +182,15 @@ export default function TrangThaiDatabase() {
                   <label className="block text-xs font-bold text-slate-700 mb-1">
                     Link Cloudflare Tunnel Backend (hoặc Render / Localhost):
                   </label>
-                  <div className="relative">
-                    <input
-                      type="url"
-                      value={inputUrl}
-                      onChange={(e) => setInputUrl(e.target.value)}
-                      placeholder="https://xxxxx.trycloudflare.com hoặc http://localhost:3000"
-                      className="w-full text-xs font-mono px-3 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-                    />
-                  </div>
+                  <input
+                    type="url"
+                    value={inputUrl}
+                    onChange={(e) => setInputUrl(e.target.value)}
+                    placeholder="https://xxxxx.trycloudflare.com hoặc http://localhost:3000"
+                    className="w-full text-xs font-mono px-3 py-2.5 rounded-lg border border-slate-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  />
                   <p className="text-[11px] text-slate-500 mt-1">
-                    👉 Bấm chạy file <b className="text-slate-800">CHAY-SERVER-CLOUDFLARE.bat</b> trên máy tính để lấy đường link này.
+                    👉 Bấm chạy file <b className="text-slate-800">CHAY-SERVER-CLOUDFLARE.bat</b> trên máy tính để lấy link.
                   </p>
                 </div>
 
@@ -209,16 +237,20 @@ export default function TrangThaiDatabase() {
                 </div>
               </form>
 
-              {/* Hướng dẫn 2 bước */}
-              <div className="bg-slate-50 p-3 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1.5">
-                <p className="font-bold text-slate-800 flex items-center gap-1">
-                  💡 Hướng dẫn kết nối MySQL máy bạn với web Netlify:
-                </p>
-                <ol className="list-decimal list-inside space-y-1">
-                  <li>Mở <b>XAMPP</b> và bấm <b>Start MySQL</b>.</li>
-                  <li>Bấm đúp chuột vào file <b>CHAY-SERVER-CLOUDFLARE.bat</b> trong thư mục dự án.</li>
-                  <li>Copy đường link <code className="bg-slate-200 px-1 rounded text-orange-700">.trycloudflare.com</code> hiện lên và dán vào ô trên rồi bấm <b>Lưu & Kết Nối CSDL</b>.</li>
-                </ol>
+              {/* Tùy chọn ẩn hiện icon */}
+              <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-500">
+                <span>Trạng thái nút nổi ở góc màn hình:</span>
+                <button
+                  type="button"
+                  onClick={() => {
+                    const next = !isHidden;
+                    setIsHidden(next);
+                    localStorage.setItem('hide_db_badge', String(next));
+                  }}
+                  className="text-orange-600 hover:underline font-medium cursor-pointer"
+                >
+                  {isHidden ? '👁️ Hiện lại nút nổi' : '🙈 Ẩn nút nổi (cho web giống thật 100%)'}
+                </button>
               </div>
             </div>
 

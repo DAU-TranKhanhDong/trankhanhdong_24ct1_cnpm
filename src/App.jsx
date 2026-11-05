@@ -5,6 +5,7 @@ import { ProductProvider } from './context/ProductContext';
 import { CartProvider } from './context/CartContext';
 import { OrderProvider } from './context/OrderContext';
 import AppRoutes from './routes/AppRoutes';
+import TrangThaiDatabase from './components/dung-chung/TrangThaiDatabase';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <CartProvider>
             <OrderProvider>
               <AppRoutes />
+              <TrangThaiDatabase />
             </OrderProvider>
           </CartProvider>
         </ProductProvider>
@@ -23,4 +25,3 @@ function App() {
 }
 
 export default App;
-

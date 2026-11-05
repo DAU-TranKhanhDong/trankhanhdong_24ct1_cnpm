@@ -122,7 +122,17 @@ export default function Footer() {
       <div className="border-t border-slate-800 py-4 text-center text-xs text-slate-400">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p>© 2026 GiaDụngSmart E-Commerce. Xây dựng bằng React & Tailwind CSS.</p>
-          <p className="text-slate-400">Đồ án môn học Công Nghệ Phần Mềm (CNPM).</p>
+          <div className="flex items-center gap-3">
+            <span className="text-slate-500">Đồ án CNPM</span>
+            <span className="text-slate-700">•</span>
+            <button
+              onClick={() => window.dispatchEvent(new Event('open_db_modal'))}
+              className="text-slate-500 hover:text-orange-400 transition-colors cursor-pointer text-[11px]"
+              title="Cấu hình kết nối CSDL MySQL"
+            >
+              ⚙️ CSDL
+            </button>
+          </div>
         </div>
       </div>
     </footer>
