@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Database, CheckCircle2, AlertCircle, RefreshCw, Globe, Settings, EyeOff } from 'lucide-react';
+import { Database, CheckCircle2, AlertCircle, RefreshCw, Globe, Settings, EyeOff, Sparkles } from 'lucide-react';
 import { getApiBaseUrl, setCustomApiUrl, checkDatabaseStatus } from '../../config/api';
 
 export default function TrangThaiDatabase() {
@@ -8,8 +8,10 @@ export default function TrangThaiDatabase() {
   const [inputUrl, setInputUrl] = useState('');
   const [testing, setTesting] = useState(false);
   const [feedback, setFeedback] = useState(null);
-  const [isHidden, setIsHidden] = useState(() => {
-    return localStorage.getItem('hide_db_badge') === 'true';
+  
+  // Trạng thái ẩn/hiện nút trên menu (Mặc định: HIỆN)
+  const [isVisible, setIsVisible] = useState(() => {
+    return localStorage.getItem('show_db_pill') !== 'false';
   });
 
   const fetchStatus = async () => {
@@ -31,24 +33,22 @@ export default function TrangThaiDatabase() {
       fetchStatus();
     };
 
-    const handleOpenFromFooter = () => {
-      handleOpenModal();
-    };
-
     const handleKeyDown = (e) => {
-      // Phím tắt Ctrl + Shift + D để mở bảng CSDL
-      if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
+      // Phím tắt F2 hoặc Ctrl + Shift + D để ẩn/hiện nút trên thanh menu
+      if (e.key === 'F2' || (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd'))) {
         e.preventDefault();
-        setIsOpen(prev => !prev);
+        setIsVisible(prev => {
+          const next = !prev;
+          localStorage.setItem('show_db_pill', String(next));
+          return next;
+        });
       }
     };
 
     window.addEventListener('api_url_changed', handleUrlChange);
-    window.addEventListener('open_db_modal', handleOpenFromFooter);
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('api_url_changed', handleUrlChange);
-      window.removeEventListener('open_db_modal', handleOpenFromFooter);
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
@@ -99,36 +99,39 @@ export default function TrangThaiDatabase() {
 
   const toggleHide = (e) => {
     e.stopPropagation();
-    const next = !isHidden;
-    setIsHidden(next);
-    localStorage.setItem('hide_db_badge', String(next));
+    setIsVisible(false);
+    localStorage.setItem('show_db_pill', 'false');
   };
 
   return (
     <>
-      {/* Nút bấm tinh gọn dạng Floating Widget ở góc dưới bên trái màn hình */}
-      {!isHidden && (
-        <div className="fixed bottom-3 left-3 z-[9999] group">
+      {/* Nút hiển thị trên thanh Header Topbar */}
+      {isVisible && (
+        <div className="flex items-center gap-1.5">
           <button
             type="button"
             onClick={handleOpenModal}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-lg backdrop-blur-md cursor-pointer border ${
+            className={`flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold transition-all border shadow-sm cursor-pointer ${
               status.connected
-                ? 'bg-slate-900 text-emerald-400 border-emerald-500 hover:scale-105'
-                : 'bg-slate-900 text-amber-400 border-amber-500 hover:scale-105'
+                ? 'bg-emerald-950/90 text-emerald-300 border-emerald-500/60 hover:bg-emerald-900'
+                : 'bg-amber-950/80 text-amber-300 border-amber-500/50 hover:bg-amber-900'
             }`}
-            title="Bấm để xem/cấu hình kết nối CSDL MySQL (hoặc bấm Ctrl+Shift+D)"
+            title="Bấm để kiểm tra kết nối CSDL (Bấm F2 để ẩn/hiện nút này)"
           >
             <span className={`w-2 h-2 rounded-full ${status.connected ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
-            <Database size={13} />
-            <span>{status.connected ? 'MySQL Online' : 'CSDL Demo'}</span>
-            <span
-              onClick={toggleHide}
-              title="Ẩn nút này khỏi màn hình (vẫn mở lại được bằng Ctrl+Shift+D hoặc ở chân trang)"
-              className="ml-1 text-slate-400 hover:text-white p-0.5"
-            >
-              <EyeOff size={12} />
-            </span>
+            <Database size={12} />
+            <span>{status.connected ? 'MySQL: Đã kết nối' : 'CSDL: Demo Local'}</span>
+            <Settings size={10} className="opacity-70 ml-0.5" />
+          </button>
+
+          {/* Nút icon mắt ẩn nhanh */}
+          <button
+            type="button"
+            onClick={toggleHide}
+            className="text-slate-400 hover:text-white p-0.5 transition-colors cursor-pointer"
+            title="Ẩn nút này (Bấm phím F2 hoặc Ctrl+Shift+D để mở lại)"
+          >
+            <EyeOff size={11} />
           </button>
         </div>
       )}
@@ -246,20 +249,14 @@ export default function TrangThaiDatabase() {
                 </div>
               </form>
 
-              {/* Tùy chọn ẩn hiện icon */}
-              <div className="flex items-center justify-between pt-2 border-t border-slate-100 text-xs text-slate-500">
-                <span>Trạng thái nút nổi ở góc màn hình:</span>
-                <button
-                  type="button"
-                  onClick={() => {
-                    const next = !isHidden;
-                    setIsHidden(next);
-                    localStorage.setItem('hide_db_badge', String(next));
-                  }}
-                  className="text-orange-600 hover:underline font-medium cursor-pointer"
-                >
-                  {isHidden ? '👁️ Hiện lại nút nổi' : '🙈 Ẩn nút nổi (cho web giống thật 100%)'}
-                </button>
+              {/* Hướng dẫn phím tắt */}
+              <div className="bg-orange-50 p-3 rounded-xl border border-orange-200 text-xs text-orange-950 space-y-1">
+                <p className="font-bold flex items-center gap-1.5 text-orange-800">
+                  <Sparkles size={14} /> Phím tắt tiện lợi cho bạn:
+                </p>
+                <p>
+                  Bấm phím <b>F2</b> (hoặc <b>Ctrl + Shift + D</b>) để <b>Ẩn hoặc Hiện</b> nút CSDL trên thanh menu bất kỳ lúc nào!
+                </p>
               </div>
             </div>
 
