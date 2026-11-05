@@ -35,11 +35,21 @@ export default function TrangThaiDatabase() {
       handleOpenModal();
     };
 
+    const handleKeyDown = (e) => {
+      // Phím tắt Ctrl + Shift + D để mở bảng CSDL
+      if (e.ctrlKey && e.shiftKey && (e.key === 'D' || e.key === 'd')) {
+        e.preventDefault();
+        setIsOpen(prev => !prev);
+      }
+    };
+
     window.addEventListener('api_url_changed', handleUrlChange);
     window.addEventListener('open_db_modal', handleOpenFromFooter);
+    window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('api_url_changed', handleUrlChange);
       window.removeEventListener('open_db_modal', handleOpenFromFooter);
+      window.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
@@ -98,27 +108,26 @@ export default function TrangThaiDatabase() {
     <>
       {/* Nút bấm tinh gọn dạng Floating Widget ở góc dưới bên trái màn hình */}
       {!isHidden && (
-        <div className="fixed bottom-3 left-3 z-40 group">
+        <div className="fixed bottom-3 left-3 z-[9999] group">
           <button
+            type="button"
             onClick={handleOpenModal}
-            className={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-full text-[11px] font-semibold transition-all shadow-md backdrop-blur-md cursor-pointer border opacity-30 hover:opacity-100 ${
+            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-all shadow-lg backdrop-blur-md cursor-pointer border ${
               status.connected
-                ? 'bg-slate-900/90 text-emerald-400 border-emerald-500/40 hover:bg-slate-900'
-                : 'bg-slate-900/90 text-amber-400 border-amber-500/40 hover:bg-slate-900'
+                ? 'bg-slate-900 text-emerald-400 border-emerald-500 hover:scale-105'
+                : 'bg-slate-900 text-amber-400 border-amber-500 hover:scale-105'
             }`}
-            title="Bấm để xem/cấu hình kết nối CSDL MySQL"
+            title="Bấm để xem/cấu hình kết nối CSDL MySQL (hoặc bấm Ctrl+Shift+D)"
           >
             <span className={`w-2 h-2 rounded-full ${status.connected ? 'bg-emerald-400 animate-pulse' : 'bg-amber-400'}`} />
-            <Database size={12} />
-            <span className="hidden group-hover:inline transition-all duration-200">
-              {status.connected ? 'MySQL Online' : 'CSDL Demo'}
-            </span>
+            <Database size={13} />
+            <span>{status.connected ? 'MySQL Online' : 'CSDL Demo'}</span>
             <span
               onClick={toggleHide}
-              title="Ẩn nút này khỏi màn hình (vẫn mở lại được ở cuối chân trang)"
-              className="ml-1 text-slate-400 hover:text-white hidden group-hover:inline p-0.5"
+              title="Ẩn nút này khỏi màn hình (vẫn mở lại được bằng Ctrl+Shift+D hoặc ở chân trang)"
+              className="ml-1 text-slate-400 hover:text-white p-0.5"
             >
-              <EyeOff size={11} />
+              <EyeOff size={12} />
             </span>
           </button>
         </div>
@@ -126,7 +135,7 @@ export default function TrangThaiDatabase() {
 
       {/* Modal Cấu hình Kết nối CSDL */}
       {isOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs animate-in fade-in duration-150">
+        <div className="fixed inset-0 z-[99999] flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-150">
           <div className="bg-white rounded-2xl max-w-lg w-full shadow-2xl border border-slate-200 overflow-hidden text-slate-800">
             {/* Modal Header */}
             <div className="bg-slate-900 text-white px-6 py-4 flex items-center justify-between">
