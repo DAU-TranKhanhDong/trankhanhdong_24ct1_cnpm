@@ -8,7 +8,7 @@
  * 4. Mặc định chạy nội bộ: 'http://localhost:3000'
  */
 
-export const DEFAULT_ONLINE_API_URL = 'https://developing-explanation-out-contains.trycloudflare.com';
+export const DEFAULT_ONLINE_API_URL = 'https://findlaw-task-communities-albuquerque.trycloudflare.com';
 
 export const getApiBaseUrl = () => {
   if (typeof window !== 'undefined') {
