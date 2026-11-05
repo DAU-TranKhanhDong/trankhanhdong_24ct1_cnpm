@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { INITIAL_USERS } from '../data/mockData';
+import { getApiBaseUrl } from '../config/api';
 
 // Tài khoản Quản trị viên (Admin) luôn có sẵn trên hệ thống
 export const DEFAULT_ADMIN = {
@@ -65,11 +66,12 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('app_users', JSON.stringify(users));
   }, [users]);
 
-  // Tự động đồng bộ người dùng từ CSDL MySQL XAMPP khi khởi động
+  // Tự động đồng bộ người dùng từ CSDL MySQL khi khởi động hoặc đổi API URL
   useEffect(() => {
     const fetchUsersFromDB = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/v1/auth/users');
+        const baseUrl = getApiBaseUrl();
+        const res = await fetch(`${baseUrl}/api/v1/auth/users`);
         if (res.ok) {
           const json = await res.json();
           if (json.data && json.data.length > 0) {
@@ -100,6 +102,9 @@ export const AuthProvider = ({ children }) => {
       }
     };
     fetchUsersFromDB();
+
+    window.addEventListener('api_url_changed', fetchUsersFromDB);
+    return () => window.removeEventListener('api_url_changed', fetchUsersFromDB);
   }, []);
 
   useEffect(() => {
@@ -168,7 +173,8 @@ export const AuthProvider = ({ children }) => {
 
     // Gửi yêu cầu lưu vào CSDL MySQL qua Backend API
     try {
-      const res = await fetch('http://localhost:3000/api/v1/auth/register', {
+      const baseUrl = getApiBaseUrl();
+      const res = await fetch(`${baseUrl}/api/v1/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

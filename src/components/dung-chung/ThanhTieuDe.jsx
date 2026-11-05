@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { ShoppingBag, Search, User, LogOut, PackageCheck, Shield, Store, Menu, X, Sparkles } from 'lucide-react';
 import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
+import TrangThaiDatabase from './TrangThaiDatabase';
 
 export default function Header() {
   const { currentUser, logout, isAdmin, isSeller } = useAuth();
@@ -30,7 +31,8 @@ export default function Header() {
           <div className="flex items-center gap-4 text-xs">
             <Link to="/products" className="text-slate-300 hover:text-white">Sản phẩm hot</Link>
             <Link to="/orders" className="text-slate-300 hover:text-white">Tra cứu đơn</Link>
-            <span className="text-slate-400">Hotline: <b className="text-white">1900 8888</b></span>
+            <span className="text-slate-700">|</span>
+            <TrangThaiDatabase />
             <span className="text-slate-700">|</span>
 
             {/* Trạng thái đăng nhập trên Topbar */}

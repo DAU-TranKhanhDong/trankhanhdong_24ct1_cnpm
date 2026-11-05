@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { INITIAL_PRODUCTS, INITIAL_PROMOTIONS, INITIAL_REVIEWS } from '../data/mockData';
+import { getApiBaseUrl } from '../config/api';
 
 const ProductContext = createContext();
 
@@ -30,6 +31,53 @@ export const ProductProvider = ({ children }) => {
   useEffect(() => {
     localStorage.setItem('app_reviews', JSON.stringify(reviews));
   }, [reviews]);
+
+  // Đồng bộ sản phẩm từ CSDL MySQL qua Backend khi có kết nối
+  useEffect(() => {
+    const fetchProductsFromDB = async () => {
+      try {
+        const baseUrl = getApiBaseUrl();
+        const res = await fetch(`${baseUrl}/api/v1/products`);
+        if (res.ok) {
+          const json = await res.json();
+          if (json.data && json.data.length > 0) {
+            setProducts(prev => {
+              const currentIds = new Set(prev.map(p => String(p.id)));
+              const newItems = json.data
+                .filter(p => !currentIds.has(String(p.id)))
+                .map(p => ({
+                  id: String(p.id),
+                  name: p.name,
+                  category: p.category_id || 'bep',
+                  brand: p.brand_name || 'Khác',
+                  price: Number(p.price) || 0,
+                  originalPrice: Number(p.original_price) || Number(p.price) || 0,
+                  rating: Number(p.rating) || 5.0,
+                  ratingCount: Number(p.rating_count) || 10,
+                  stock: Number(p.stock) || 0,
+                  soldCount: Number(p.sold_count) || 0,
+                  featured: Boolean(p.featured),
+                  bestSeller: false,
+                  sellerId: p.seller_id || 'usr_seller',
+                  sellerName: 'Gia Dụng SmartHome Chính Hãng',
+                  thumbnail: p.thumbnail || 'https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=600&auto=format&fit=crop&q=80',
+                  description: p.description || '',
+                  warrantyMonths: Number(p.warranty_months) || 12,
+                  status: p.status || 'active'
+                }));
+              return newItems.length > 0 ? [...newItems, ...prev] : prev;
+            });
+          }
+        }
+      } catch (err) {
+        // Backend chưa bật
+      }
+    };
+    fetchProductsFromDB();
+
+    window.addEventListener('api_url_changed', fetchProductsFromDB);
+    return () => window.removeEventListener('api_url_changed', fetchProductsFromDB);
+  }, []);
 
   // Người bán & Admin: Thêm sản phẩm
   const addProduct = (prodData) => {

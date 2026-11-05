@@ -9,6 +9,8 @@ lerna-debug.log*
 
 *.zip
 *.rar
+*.exe
+tools/
 
 node_modules
 dist
